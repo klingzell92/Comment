@@ -8,7 +8,6 @@ $delete = $di->get("url")->create("user/delete");
 
 ?><h1>Användare</h1>
 
-
 <table>
     <tr>
         <th>Användarnamn</th>
