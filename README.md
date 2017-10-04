@@ -29,6 +29,10 @@ DI services
 ---------------
 You need to add the services di configuration config/di.php. There is a sample you can use in vendor/phkl16/comment/config/di.php.
 
+Database
+------------
+You need to have a database config file. There is a sample you can use under config/database.php
+
 License
 ------------------
 
