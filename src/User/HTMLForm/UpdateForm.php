@@ -129,6 +129,8 @@ class UpdateForm extends FormModel
 
 
         $user->save();
+
+        $this->form->addOutput("Användaren uppdaterades");
         return true;
     }
 }

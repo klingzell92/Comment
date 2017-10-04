@@ -45,15 +45,4 @@ class UpdateFormtTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf("\Anax\User\HTMLForm\UpdateForm", $this->update);
         $this->deleteUser();
     }
-
-    /**
-    * Test to try the callback function
-    */
-
-    public function testCallback()
-    {
-        $this->update = new UpdateForm($this->di, $this->di->get("db")->lastInsertId());
-        $this->assertEquals($this->update->callbackSubmit(), true);
-        $this->deleteUser();
-    }
 }
