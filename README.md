@@ -13,14 +13,18 @@ composer require phkl16/comment
 Router files
 --------------
 
+```shell
 rsync -av vendor/phkl16/comment/config/route2/comment.php config/route2
 rsync -av vendor/phkl16/comment/config/route2/userController.php config/route2
+```
+
 You need to include the router file in your router configuration config/route.php. There is a sample you can use in vendor/phkl16/comment/config/route2.php.
 
 View files
 ------------------
+```shell
 rsync -av vendor/phkl16/comment/view/* view/
-
+```
 DI services
 ---------------
 You need to add the services di configuration config/di.php. There is a sample you can use in vendor/phkl16/comment/config/di.php.
