@@ -31,7 +31,8 @@ You need to add the services di configuration config/di.php. There is a sample y
 
 Database
 ------------
-You need to have a database config file. There is a sample you can use under config/database.php
+You need to have a database config file. There is a sample you can use under vendor/phkl16/config/database.php
+You will also need to build upp your database, you can find sample files for the tables under vendor/phkl16/sql 
 
 License
 ------------------
