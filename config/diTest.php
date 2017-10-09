@@ -147,7 +147,7 @@ return [
             "shared" => true,
             "callback" => function () {
                 $obj = new \Anax\Database\DatabaseQueryBuilder();
-                $obj->configure("database.php");
+                $obj->configure("testdatabase.php");
                 return $obj;
             }
         ],

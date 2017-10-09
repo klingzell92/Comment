@@ -33,7 +33,7 @@ class CommentTest extends \PHPUnit_Framework_TestCase
         $comment = new Comment();
         $this->assertInstanceOf("\Anax\Comment\Comment", $comment);
     }
-    
+
     /**
     * Test the convertEmail function
     */
