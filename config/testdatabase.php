@@ -30,5 +30,5 @@ return [
 */
 
 return [
-    "dsn"             => "sqlite:" . ANAX_INSTALL_PATH . "/data/db.sqlite"
+    "dsn"             => "sqlite:" . ANAX_INSTALL_PATH . "/config/testDatabase/db.sqlite"
 ];
