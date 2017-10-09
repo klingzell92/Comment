@@ -1,9 +1,6 @@
 [![Build Status](https://travis-ci.org/klingzell92/Comment.svg?branch=master)](https://travis-ci.org/klingzell92/Comment)
-
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/klingzell92/Comment/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/klingzell92/Comment/?branch=master)
-
 [![Code Coverage](https://scrutinizer-ci.com/g/klingzell92/Comment/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/klingzell92/Comment/?branch=master)
-
 [![Build Status](https://scrutinizer-ci.com/g/klingzell92/Comment/badges/build.png?b=master)](https://scrutinizer-ci.com/g/klingzell92/Comment/build-status/master)
 
 phkl16 Comment module
