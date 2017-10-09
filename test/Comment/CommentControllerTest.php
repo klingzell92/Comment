@@ -1,13 +1,11 @@
 <?php
 
-namespace Anax\User\HTMLForm;
-
-use Anax\User\User;
+namespace Anax\Comment;
 
 /**
  * Test cases for class CommentController.
  */
-class UserLoginFormTest extends \PHPUnit_Framework_TestCase
+class CommentControllerTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Test case to construct object and verify that the object
@@ -16,14 +14,14 @@ class UserLoginFormTest extends \PHPUnit_Framework_TestCase
      */
 
     protected $di;
-    protected $login;
+    protected $commentController;
      /**
-      * Setting up di and login
+      * Test cases requires DI-container, therefore save in constructor
       */
     public function setUp()
     {
         $this->di = new \Anax\DI\DIFactoryConfig("diTest.php");
-        $this->login = new UserLoginForm($this->di);
+        $this->commentController = new CommentController();
     }
 
     /**
@@ -31,11 +29,6 @@ class UserLoginFormTest extends \PHPUnit_Framework_TestCase
     */
     public function testCreateObject()
     {
-        $this->assertInstanceOf("\Anax\User\HTMLForm\UserLoginForm", $this->login);
-    }
-
-    public function testCallback()
-    {
-        $this->assertEquals(false, $this->login->callbackSubmit());
+        $this->assertInstanceOf("\Anax\Comment\CommentController", $this->commentController);
     }
 }

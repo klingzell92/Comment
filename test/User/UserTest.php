@@ -23,9 +23,9 @@ class UserTest extends \PHPUnit_Framework_TestCase
          $this->di = new \Anax\DI\DIFactoryConfig("diTest.php");
          $this->user = new User();
          $this->user->setDb($this->di->get("db"));
-         $this->user->acronym = "doe";
-         $this->user->setPassword("doe");
-         $this->user->email = "doe@gmail.com";
+         $this->user->acronym = "test";
+         $this->user->setPassword("test");
+         $this->user->email = "test@gmail.com";
          $this->user->save();
     }
 
@@ -43,8 +43,8 @@ class UserTest extends \PHPUnit_Framework_TestCase
 
     public function testPassword()
     {
-        $this->user->getUserData("doe");
-        $passwordValue = $this->user->verifyPassword("doe", "doe");
+        $this->user->getUserData("test");
+        $passwordValue = $this->user->verifyPassword("test", "test");
 
         $this->assertEquals($passwordValue, true);
         $this->deleteUser();
@@ -52,8 +52,8 @@ class UserTest extends \PHPUnit_Framework_TestCase
 
     public function testGetUserData()
     {
-        $returnData = $this->user->getUserData("doe");
-        $this->assertEquals("doe@gmail.com", $returnData->email);
+        $returnData = $this->user->getUserData("test");
+        $this->assertEquals("test@gmail.com", $returnData->email);
         $this->deleteUser();
     }
 }

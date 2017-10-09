@@ -34,15 +34,20 @@ class CommentTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf("\Anax\Comment\Comment", $comment);
     }
 
+    public function testHasAttributes()
+    {
+        $this->assertClassHasAttribute("user", "Anax\Comment\Comment");
+        $this->assertClassHasAttribute("content", "Anax\Comment\Comment");
+        $this->assertClassHasAttribute("gravatar", "Anax\Comment\Comment");
+    }
+
     /**
-    * Test the convertEmail function
+    * Test posting a comment
     */
     public function testComment()
     {
         //var_dump($this->comment);
         $gravatar =  "https://www.gravatar.com/avatar/".$this->comment->convertEmail("doe@gmail.com");
-        //var_dump($this->comment->db->lastInsertId());
-
         $this->comment->addComment("doe", "Hej", $gravatar);
         $id = $this->di->get("db")->lastInsertId();
         $this->comment->updateComment($id, "doe", "TestarTestarTestar", $gravatar);

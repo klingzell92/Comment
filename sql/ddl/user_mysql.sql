@@ -39,7 +39,6 @@ CREATE TABLE User (
     `created` DATETIME,
     `updated` DATETIME,
     `deleted` DATETIME,
-    `active` DATETIME 
+    `active` DATETIME
 ) ENGINE INNODB CHARACTER SET utf8 COLLATE utf8_swedish_ci;
 SELECT * FROM User;
-DELETE FROM User WHERE id = 7;

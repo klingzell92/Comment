@@ -1,3 +1,11 @@
+[![Build Status](https://travis-ci.org/klingzell92/Comment.svg?branch=master)](https://travis-ci.org/klingzell92/Comment)
+
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/klingzell92/Comment/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/klingzell92/Comment/?branch=master)
+
+[![Code Coverage](https://scrutinizer-ci.com/g/klingzell92/Comment/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/klingzell92/Comment/?branch=master)
+
+[![Build Status](https://scrutinizer-ci.com/g/klingzell92/Comment/badges/build.png?b=master)](https://scrutinizer-ci.com/g/klingzell92/Comment/build-status/master)
+
 phkl16 Comment module
 ==================================
 Install
@@ -32,7 +40,7 @@ You need to add the services di configuration config/di.php. There is a sample y
 Database
 ------------
 You need to have a database config file. There is a sample you can use under vendor/phkl16/config/database.php
-You will also need to build upp your database, you can find sample files for the tables under vendor/phkl16/sql 
+You will also need to build upp your database, you can find sample files for the tables under vendor/phkl16/sql
 
 License
 ------------------

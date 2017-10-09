@@ -18,3 +18,4 @@ CREATE TABLE User (
     "deleted" DATETIME,
     "active" DATETIME
 );
+INSERT INTO User ("id", "acronym", "email", "password") VALUES (1, "doe", "doe@gmail.com", "$2y$10$2kraKnucDXhoicOCm89Ge.KkXNcjMVNUtuFQhldZAkOrZ5CVtCzIe")

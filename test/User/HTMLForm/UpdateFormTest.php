@@ -17,6 +17,7 @@ class UpdateFormtTest extends \PHPUnit_Framework_TestCase
 
     protected $di;
     protected $update;
+    protected $user;
      /**
       * Setting up di and a user
       */
@@ -25,24 +26,15 @@ class UpdateFormtTest extends \PHPUnit_Framework_TestCase
         $this->di = new \Anax\DI\DIFactoryConfig("diTest.php");
         $this->user = new User();
         $this->user->setDb($this->di->get("db"));
-        $this->user->acronym = "Test";
-        $this->user->email = "test@gmail.com";
-        $this->user->setPassword("Test");
-        $this->user->save();
-    }
-
-    public function deleteUser()
-    {
-        $this->user->delete($this->di->get("db")->lastInsertId());
+        $this->user->find("acronym", "doe");
+        $this->update = new UpdateForm($this->di, $this->user->id);
     }
 
     /**
-    * Test the comment object is an instance of the Comment class
+    * Testing the callback function, return shuold be true
     */
-    public function testCreateObject()
+    public function testCallback()
     {
-        $this->update = new UpdateForm($this->di, $this->di->get("db")->lastInsertId());
-        $this->assertInstanceOf("\Anax\User\HTMLForm\UpdateForm", $this->update);
-        $this->deleteUser();
+        $this->assertEquals(true, $this->update->callbackSubmit());
     }
 }
