@@ -22,6 +22,7 @@ class CommentControllerTest extends \PHPUnit_Framework_TestCase
     {
         $this->di = new \Anax\DI\DIFactoryConfig("diTest.php");
         $this->commentController = new CommentController();
+        $this->commentController->setDI($this->di);
     }
 
     /**
